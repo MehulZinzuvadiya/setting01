@@ -27,6 +27,7 @@ class _HomeSCreenState extends State<HomeSCreen> {
                 fontSize: 18,
                 color: Colors.white,
                 fontWeight: FontWeight.w500)),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Padding(

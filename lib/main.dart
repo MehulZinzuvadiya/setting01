@@ -1,15 +1,11 @@
-import 'dart:html';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:setting01/setting/provider/setting_provider.dart';
 import 'package:setting01/setting/view/settingScreen.dart';
 import 'package:setting01/stepper/provider/stepper_provider.dart';
-import 'package:setting01/stepper/view/stepScreen.dart';
-import 'package:setting01/stepper2/view/profileStepper.dart';
-
 import 'i_setting/view.dart';
+import 'dart:io';
 
 void main() {
   runApp(MultiProvider(
@@ -21,7 +17,7 @@ void main() {
         create: (context) => StepperProvider(),
       )
     ],
-    child:Ios(),
+    child:Platform.isAndroid?HomeSCreen():Isetting(),
   ));
 }
 Widget android(){
